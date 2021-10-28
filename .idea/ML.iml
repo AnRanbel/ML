@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.8 (venv)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="PyDocumentationSettings">
+    <option name="renderExternalDocumentation" value="true" />
+  </component>
+  <component name="PyNamespacePackagesService">
+    <option name="namespacePackageFolders">
+      <list>
+        <option value="$MODULE_DIR$/AnomalyDetection" />
+        <option value="$MODULE_DIR$/formula" />
+        <option value="$MODULE_DIR$/images" />
+        <option value="$MODULE_DIR$/K-Means" />
+        <option value="$MODULE_DIR$/LinearRegression" />
+        <option value="$MODULE_DIR$/LogisticRegression" />
+        <option value="$MODULE_DIR$/NeuralNetwok" />
+        <option value="$MODULE_DIR$/PCA" />
+        <option value="$MODULE_DIR$/SVM" />
+      </list>
+    </option>
+  </component>
+</module>
