@@ -110,11 +110,11 @@ knn_accuracy = accuracy_score(y_test,y_pred) * 100
 # \033[3开头的是字体颜色;[1m 比 [0m 更亮更粗;[4开头的是背景色
 print('\033[1m' +'Best parameters : '+ '\033[0m', cv.best_params_)
 print('\033[1m' +'Accuracy : {:.2f}%'.format(knn_accuracy) + '\033[0m')
-print('\033[1m' +'Classification report : '+ '\033[0m\n', classification_report(y_test, y_pred))
+print('\033[1m' +'Classification report : '+ '\033[0m\n', classification_report(y_test, y_pred))    # macro avg：宏平均  weighted avg：加权平均，考虑了每个类别样本数量在总样本中占比
 
 cm = confusion_matrix(y_test,y_pred)       # 混淆矩阵
 print('\033[1m' +'Confusion Matrix : '+ '\033[0m')
-sns.heatmap(cm, cmap = 'OrRd',annot = True, fmt='d')    # 根据混淆矩阵生成可视图  cmap-颜色  annot=true-显示数字
+sns.heatmap(cm, cmap = 'OrRd',annot = True, fmt='d')    # 根据混淆矩阵生成可视图  cmap-颜色  annot=true-显示数字（竖轴为真实值，横轴为预测值）
 plt.show()
 
 # 在程序运行结束的位置添加结束时间
