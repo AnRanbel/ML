@@ -4,9 +4,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def rand(a, b):
-    return (b - a) * np.random.random() + a
-
 def sigmoid(x):
     return 1.0 / (1.0 + np.exp(-x))
 
@@ -44,16 +41,14 @@ class BP:
             input = np.ones((1, xj.shape[0] + 1))       # 将偏置的系数1加入input
             input[:, :-1] = xj    # 前几列放输入x，最后一列是偏置的系数1
             x = input
-            ah = x.dot(self.input_weights)
+            ah = np.dot(x,self.input_weights)
             bh = sigmoid(ah)    # 隐藏层1
 
             input = np.ones((1, self.hidden_n + 1))
             input[:, :-1] = bh
             bh = input
-
             bj = np.dot(bh, self.output_weights)
             yj.append(sigmoid(bj))    # 输出层
-
 
         yj = np.array(yj)
         Y = np.array(Y)
