@@ -4,8 +4,6 @@ import matplotlib.pyplot as plt
 from math import log
 import operator
 
-
-
 def createDataSet():
 	dataSet = [[0, 0, 0, 0, 'no'],						
 			[0, 0, 0, 1, 'no'],
@@ -24,7 +22,6 @@ def createDataSet():
 			[2, 0, 0, 0, 'no']]
 	labels = ['F1-AGE', 'F2-WORK', 'F3-HOME', 'F4-LOAN']		
 	return dataSet, labels
-
 
 def createTree(dataset,labels,featLabels):
 	classList = [example[-1] for example in dataset]
@@ -70,12 +67,7 @@ def chooseBestFeatureToSplit(dataset):
 			bestInfoGain = infoGain
 			bestFeature = i	
 	return bestFeature
-			
-			
-			
-			
-			
-		
+
 def splitDataSet(dataset,axis,val):
 	retDataSet = []
 	for featVec in dataset:
@@ -165,7 +157,7 @@ def createPlot(inTree):
 	createPlot.ax1 = plt.subplot(111, frameon=False, **axprops)    							#去掉x、y轴
 	plotTree.totalW = float(getNumLeafs(inTree))											#获取决策树叶结点数目
 	plotTree.totalD = float(getTreeDepth(inTree))											#获取决策树层数
-	plotTree.xOff = -0.5/plotTree.totalW; plotTree.yOff = 1.0;								#x偏移
+	plotTree.xOff = -0.5/plotTree.totalW; plotTree.yOff = 1.0							#x偏移
 	plotTree(inTree, (0.5,1.0), '')															#绘制决策树
 	plt.show()
 
